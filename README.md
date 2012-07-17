@@ -1,4 +1,4 @@
-# Batch Paste
+# PasteBoard.
 
 支持批量粘贴的通用解决方案。
 
@@ -6,10 +6,10 @@
 
 ```
 define(function(){
-    var BatchPaste = require("batchpaste");
+    var PasteBoard = require("pasteboard");
     var CSV = require("csv");
 
-    BatchPaste.paste(function(evt, text){
+    PasteBoard.on("paste", function(text, evt){
         var a = CSV.parse(text, "\t");
         a.each(function(e, i){
             alert(e.join());

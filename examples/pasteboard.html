@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>PasteBoard Example</title>
-<script src="../../../tools/seajs-and-its-friends.js"></script>
+<script src="https://a.alipayobjects.com/static/arale/seajs/1.1.8/sea.js"></script>
 </head>
 <body>
 
@@ -38,6 +38,10 @@
 
 // for debug
 seajs.config({
+    alias: {
+        "jquery": "jquery/1.7.2/jquery",
+        "events": "events/0.9.1/events"
+    }
     /*
     map: [
         [/^(.+)\/widget\.js.*$/, '$1/../../../lib/widget/src/widget.js']
