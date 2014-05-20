@@ -3,6 +3,10 @@
 
 ----
 
+[![spm package](http://spmjs.io/badge/pasteboard)](http://spmjs.io/package/pasteboard)
+[![Build Status](https://secure.travis-ci.org/hotoo/pasteboard.png?branch=master)](https://travis-ci.org/hotoo/pasteboard)
+[![Coverage Status](https://coveralls.io/repos/hotoo/pasteboard/badge.png?branch=master)](https://coveralls.io/r/hotoo/pasteboard)
+
 支持批量粘贴的通用解决方案。
 
 ## 使用说明
