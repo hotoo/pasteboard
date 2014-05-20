@@ -1,22 +1,43 @@
+
 # PasteBoard.
+
+----
+
+[![spm package](http://spmjs.io/badge/pasteboard)](http://spmjs.io/package/pasteboard)
+[![Build Status](https://secure.travis-ci.org/hotoo/pasteboard.png?branch=master)](https://travis-ci.org/hotoo/pasteboard)
+[![Coverage Status](https://coveralls.io/repos/hotoo/pasteboard/badge.png?branch=master)](https://coveralls.io/r/hotoo/pasteboard)
 
 支持批量粘贴的通用解决方案。
 
 ## 使用说明
 
-```
-define(function(){
-    var PasteBoard = require("pasteboard");
-    var CSV = require("csv");
+```js
+var PasteBoard = require("pasteboard");
+var CSV = require("csv");
 
-    PasteBoard.on("paste", function(text, evt){
-        var a = CSV.parse(text, "\t");
-        a.each(function(e, i){
-            alert(e.join());
-        })
-    });
+PasteBoard.on("paste", function(text, evt){
+  var a = CSV.parse(text, "\t");
+  a.each(function(e, i){
+    alert(e.join());
+  })
 });
 ```
+
+## API
+
+### on(String event_name, Function handler)
+
+绑定事件。
+
+### off(String event_name [, Function handler])
+
+解除事件绑定。
+
+## Event
+
+### paste
+
+用户将粘贴板的内容粘贴到页面上时触发。
 
 ## 批量粘贴相比文件上传的优势：
 
