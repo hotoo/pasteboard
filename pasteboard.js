@@ -22,7 +22,7 @@ function makeTempBoard(){
     top: "-1000px"
   });
   return board;
-};
+}
 
 /*
  * init.
@@ -36,7 +36,7 @@ $(document).keydown(function(evt){
   }
   if(!evt.ctrlKey && !evt.metaKey){return;}
   var keyCode = evt.keyCode || evt.which;
-  if(86 != keyCode){return;} // v
+  if(86 !== keyCode){return;} // v
 
   tempClipboard.show().focus();
 
@@ -45,7 +45,7 @@ $(document).keydown(function(evt){
    */
   window.setTimeout(function(){
     var text = tempClipboard.val();
-    if("" == text){return false;}
+    if("" === text){return false;}
     _event.trigger("paste", text, evt);
     tempClipboard.hide().val("");
   }, 50);
